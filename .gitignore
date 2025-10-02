@@ -1,0 +1,23 @@
+# Arquivos de Bytecode e Cache do Python
+*.log
+*.pot
+__pycache__/
+db.sqlite3
+media/
+static/
+
+# backup files
+*.bak
+
+# Ambiente Virtual
+venv/
+
+# Banco de dados
+*.sqlite3
+
+# Arquivos de configuração de IDEs
+.idea/
+.vscode/
+
+# Arquivos de ambiente
+.env
