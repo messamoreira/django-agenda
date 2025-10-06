@@ -15,7 +15,7 @@ pip install django
 
 ```sh
 # Cria um novo projeto Django na pasta atual
-django-admin startproject project .
+django-admin startprcoject project .
 # Cria as migrações iniciais do banco de dados
 python manage.py makemigrations
 # Aplica as migrações ao banco de dados
@@ -34,7 +34,7 @@ git branch -M main
 # Adiciona todos os arquivos
 git add .
 # Faz o commit inicial
-git commit -m "inicial commit"
+git commit -m "feat: Configuração inicial do projeto"
 # Adiciona o repositório remoto (troque pela sua URL)
 git remote add origin https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git
 # Envia para o GitHub
