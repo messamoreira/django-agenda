@@ -15,7 +15,7 @@ pip install django
 
 ```sh
 # Cria um novo projeto Django na pasta atual
-django-admin startprcoject project .
+django-admin startproject project .
 # Cria as migrações iniciais do banco de dados
 python manage.py makemigrations
 # Aplica as migrações ao banco de dados
