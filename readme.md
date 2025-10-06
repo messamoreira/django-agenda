@@ -34,7 +34,7 @@ git branch -M main
 # Adiciona todos os arquivos
 git add .
 # Faz o commit inicial
-git commit -m "inicial commit"
+git commit -m "feat: Configuração inicial do projeto"
 # Adiciona o repositório remoto (troque pela sua URL)
 git remote add origin https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git
 # Envia para o GitHub
