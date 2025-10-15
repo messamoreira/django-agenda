@@ -1,8 +1,9 @@
 from django.urls import path
-from contact import views
+from contact.views import contact_views
 
 app_name = 'contact'
 
 urlpatterns = [
-    path('',views.index, name='index'),
+    path('', contact_views.index, name='index'),
+    path('<int:contact_id>/', contact_views.contact, name='contact'),
 ]
