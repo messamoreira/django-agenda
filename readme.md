@@ -16,12 +16,18 @@ python -m venv venv
 #   (Se receber um erro de permissão, execute: Set-ExecutionPolicy RemoteSigned -Scope Process)
 # No Windows (CMD) ou no Linux/macOS (bash):
 .\venv\Scripts\activate
+# Instala o Django
+pip install django
+```
 
-# 3. Instale as dependências (com o ambiente virtual ATIVADO):
-#    (Faker é para o script de criação de contatos, Pillow é para o upload de imagens)
-pip install django faker Pillow
+## 2. Criando o Projeto
 
-# 4. Aplique as migrações para criar as tabelas no banco de dados:
+```sh
+# Cria um novo projeto Django na pasta atual
+django-admin startproject project .
+# Cria as migrações iniciais do banco de dados
+python manage.py makemigrations
+# Aplica as migrações ao banco de dados
 python manage.py migrate
 
 # 5. (Opcional) Crie um superusuário para acessar a área de admin:
