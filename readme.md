@@ -1,27 +1,38 @@
 # Guia Rápido do Projeto Django
 
-## 1. Preparação do Ambiente
+## Configuração do Ambiente de Desenvolvimento
+
+Siga estes passos na ordem para configurar e rodar o projeto.
 
 ```sh
-# Cria o ambiente virtual
+# 1. Crie o ambiente virtual (isso criará uma pasta 'venv')
 python -m venv venv
-# Ativa o ambiente virtual (Windows PowerShell)
+
+# 2. Ative o ambiente virtual
+#    Após a ativação, você verá (venv) no início do seu terminal.
+
+# No Windows (PowerShell):
+.\venv\Scripts\Activate.ps1
+#   (Se receber um erro de permissão, execute: Set-ExecutionPolicy RemoteSigned -Scope Process)
+# No Windows (CMD) ou no Linux/macOS (bash):
 .\venv\Scripts\activate
-# Instala o Django
-pip install django
-```
 
-## 2. Criando o Projeto
+# 3. Instale as dependências (com o ambiente virtual ATIVADO):
+#    (Faker é para o script de criação de contatos, Pillow é para o upload de imagens)
+pip install django faker Pillow
 
-```sh
-# Cria um novo projeto Django na pasta atual
-django-admin startproject project .
-# Cria as migrações iniciais do banco de dados
-python manage.py makemigrations
-# Aplica as migrações ao banco de dados
+# 4. Aplique as migrações para criar as tabelas no banco de dados:
 python manage.py migrate
-# Inicia o servidor de desenvolvimento
+
+# 5. (Opcional) Crie um superusuário para acessar a área de admin:
+python manage.py createsuperuser
+
+# 6. (Opcional) Popule o banco de dados com contatos de exemplo:
+python utils/create_contacts.py
+
+# 7. Inicie o servidor de desenvolvimento:
 python manage.py runserver
+#    Acesse http://127.0.0.1:8000/ no seu navegador.
 ```
 
 ## 3. Versionamento com Git
